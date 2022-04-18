@@ -1,8 +1,9 @@
-FROM golang:1.7
+FROM golang:1.8
 
 RUN mkdir /app
 COPY . /go/src/github.com/microservices-demo/payment/
 
+RUN git config --global http.sslverify false
 RUN go get -u github.com/FiloSottile/gvt
 RUN cd /go/src/github.com/microservices-demo/payment/ && gvt restore
 
