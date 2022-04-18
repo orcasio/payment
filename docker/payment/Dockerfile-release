@@ -19,4 +19,4 @@ RUN	chmod +x /app && \
 
 USER ${SERVICE_USER}
 
-CMD ["/app", "-port=80"]
+CMD ["/app", "-port=8080"]
